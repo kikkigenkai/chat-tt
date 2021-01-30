@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     <div class="InfoDate">
                         Updated at:<font class="dateFont">${this.updatedAt}</font>
                     </div>
-                    <a href="/${this.id}"><button id="edit" data-id=${this.id}>Edit</button></a>
+                    <a href="/edit/${this.id}"><button id="edit" data-id=${this.id}>Edit</button></a>
                 </div>
             `;
 

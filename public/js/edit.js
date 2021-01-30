@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             const data = new FormData(form);
             const formData = Object.fromEntries(data.entries());
-            formData.id = document.querySelector('.nickname').textContent.replace(/\s\n/, '').split(' ')[2];
+            formData.id = document.querySelector('.nickname').getAttribute('data-id');
 
             if (formData.nickname.length === 0 || formData.nickname.length >= 20 || /\s/.test(formData.nickname)) {
                 alert('Wrong nickname!');
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 })
                 .finally(() => {
                     form.reset();
-                    window.location.replace("/messages");
+                    window.location.replace("/");
                 });
             }
         });

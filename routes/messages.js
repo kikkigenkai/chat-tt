@@ -5,15 +5,31 @@ const router = Router();
 
 
 router.get('/', (req, res) => {
-    res.render('index');
+    try {
+       res.render('index'); 
+    } catch (err) {
+        console.log(err);
+    }
 });
 
-router.get('/:id',  async (req, res) => {
-    const message = await Message.findById(req.params.id);
+router.get('/edit/:id',  async (req, res) => {
+    try {
+        const message = await Message.findById(req.params.id);
 
-    res.render('edit', {
-        message
-    });
+        res.render('edit', {
+            message
+        }); 
+    } catch (err) {
+        console.log(err);
+    }
+});
+
+router.get('/docs', (req, res) => {
+    try {
+        res.render('docs');
+    } catch (err) {
+        console.log(err);
+    }
 });
 
 module.exports = router;

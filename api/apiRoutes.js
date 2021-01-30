@@ -78,6 +78,7 @@ router.put('/', async (req, res) => {
 
         res.status(200).json({ data: message });
     } catch (err) {
+        console.log(err);
         res.status(500).json({
             message: 'error'
         });

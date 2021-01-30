@@ -6,7 +6,6 @@ const busboyBodyParser = require('busboy-body-parser');
 
 const messagesRoutes = require('./routes/messages');
 const apiRoutes = require('./api/apiRoutes');
-const docsRoute = require('./routes/docs');
 
 const MONGODB_URI = 'mongodb+srv://kikkigenkai:jNRSBUKJp7MsfbZ5@cluster0.9s9kv.mongodb.net/chat?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 3000;
@@ -20,7 +19,6 @@ app.use(express.json());
 
 app.use('/', messagesRoutes);
 app.use('/api/messages', apiRoutes);
-app.use('/docs', docsRoute);
 
 (async () => {
     try {

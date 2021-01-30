@@ -9,7 +9,7 @@
     <main class="Content">
         <div class="MessagesBox">
             <div class="Message">
-                <div class="nickname"><%= message.authorName %> <font class="email">(<%= message.authorEmail %>)</font> <%= message.id %>
+                <div class="nickname" data-id=<%= message.id %>><%= message.authorName %> <font class="email">(<%= message.authorEmail %>)</font> <!--<%= message.id %> !-->
                </div>
                <div class="messageContent">
                 <%= message.messageText %>
