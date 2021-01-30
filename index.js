@@ -18,7 +18,7 @@ app.use(busboyBodyParser());
 app.use(busboyBodyParser({limit: '35mb', multi: true}));
 app.use(express.json());
 
-app.use('/messages', messagesRoutes);
+app.use('/', messagesRoutes);
 app.use('/api/messages', apiRoutes);
 app.use('/docs', docsRoute);
 
