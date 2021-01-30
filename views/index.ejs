@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+<body>
+
+    <!-- page content -->
+    <header>
+        <h2><a class="ApiRef" href="/docs">API</a></h2>
+    </header>
+    <main class="Content">
+        <div class="MessagesBox">
+
+        </div>
+        <div class="Pagination">
+            <button id="prev" class="paginationButton"><i>Prev</i></button>
+            <button id="next" class="paginationButton"><i>Next</i></button>
+        </div>
+        <div class="SendMessage">
+            <form method="POST" class="formMessage">
+                <div class="topInput">
+                    <input name="nickname" type="text" placeholder="nickname">
+                    <input name="email" type="email" placeholder="email">
+                </div>
+
+                <textarea placeholder="max length = 100" class="messageContent" maxlength="100" name="message"></textarea>
+                <input class="SubmitButton" type="submit" value="Send message">
+            </form>
+        </div>
+    </main>
+
+    <script defer src="/js/script.js"></script>
+</body>
+
+</html>

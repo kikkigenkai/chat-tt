@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+}
+
+.Content {
+    padding-top: 40px;
+	width: 90%;
+	margin: 0px auto;
+}
+
+.ListHead {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+.ListItem {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}

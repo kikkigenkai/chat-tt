@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+<body>
+
+    <!-- page content -->
+    <main class="Content">
+        <div class="MessagesBox">
+            <div class="Message">
+                <div class="nickname"><%= message.authorName %> <font class="email">(<%= message.authorEmail %>)</font> <%= message.id %>
+               </div>
+               <div class="messageContent">
+                <%= message.messageText %>
+               </div>
+               <div class="messageDate">
+                   <div class="InfoDate left">
+                       Sent at:<font class="dateFont"><%= message.createdAt %></font>
+                   </div>
+                   <div class="InfoDate">
+                       Updated at:<font class="dateFont"><%= message.updatedAt %></font>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="SendMessage">
+            <form action="/messages" method="PUT" class="formMessage">
+                <div class="topInput">
+                    <input name="nickname" type="text" placeholder="nickname">
+                    <input name="email" type="email" placeholder="email">
+                </div>
+
+                <textarea placeholder="max length = 100" class="messageContent" maxlength="100" name="message"></textarea>
+                <input class="SubmitButton" type="submit" value="Edit message">
+            </form>
+        </div>
+    </main>
+    <script defer src="/js/edit.js"></script>
+</body>
+
+</html>

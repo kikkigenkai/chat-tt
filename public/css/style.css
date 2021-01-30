@@ -1,0 +1,134 @@
+body {
+	background:
+	/* Pineapple details */ radial-gradient(circle closest-side at 50px 50px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 40px 60px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 60px 60px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 50px 70px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 150px 165px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 140px 175px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 160px 175px, #fb8b24 3px, transparent 0),
+		radial-gradient(circle closest-side at 150px 185px, #fb8b24 3px, transparent 0),
+		/* Pineapple base */ radial-gradient(ellipse closest-side at 50px 60px, #f9a734 18px, transparent 0),
+		radial-gradient(ellipse closest-side at 150px 175px, #f9a734 18px, transparent 0),
+		/* Pineapple leafs */ radial-gradient(circle closest-side at 30px 40px, #f9d8d4, 15px, transparent 0),
+		radial-gradient(circle closest-side at 40px 35px, #36964c 15px, transparent 0),
+		radial-gradient(circle closest-side at 70px 40px, #f9d8d4 15px, transparent 0),
+		radial-gradient(circle closest-side at 60px 35px, #286e38 15px, transparent 0),
+		radial-gradient(circle closest-side at 130px 155px, #f9d8d4 15px, transparent 0),
+		radial-gradient(circle closest-side at 140px 150px, #36964c 15px, transparent 0),
+		radial-gradient(circle at 170px 155px, #f9d8d4 15px, transparent 0),
+		radial-gradient(circle at 160px 150px, #286e38 15px, transparent 0);
+	background-color: #f9d8d4;
+	background-size: 180px 210px;
+	animation: animatedBackground 0.5s cubic-bezier(0.61, -0.64, 0.58, 1.46) forwards;
+}
+
+/* Animation */
+
+@keyframes animatedBackground {
+	from {
+		background-position: 0 50%;
+	}
+	to {
+		background-position: 0 0;
+	}
+}
+.Content {
+	padding-top: 40px;
+	width: 80%;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+}
+.MessagesBox {
+	width: 100%;
+	height: 60vh;
+	overflow: auto;
+	padding: 0px 10px;
+}
+.Message {
+	margin-bottom: 20px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: 2px solid black;
+	margin: 0 auto 20px;
+	display: flex;
+	flex-direction: column;
+}
+.nickname {
+	padding: 5px 5px 3px 5px;
+	font-family: "Noto Sans JP", sans-serif;
+	border-bottom: 1px solid rgb(187, 186, 186);
+}
+.email {
+	font-family: "Bodoni Moda", serif;
+}
+.messageContent {
+	font-family: "Noto Sans JP", sans-serif;
+	padding: 5px 5px 3px 5px;
+	border-bottom: 1px solid rgb(187, 186, 186);
+}
+.messageDate {
+	padding: 0px 5px 3px 5px;
+	font-family: "Bodoni Moda", serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.left {
+	padding-right: 5px;
+}
+.dateFont {
+	padding-left: 3px;
+	font-family: "Noto Sans JP", sans-serif;
+}
+.Pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 20px;
+}
+.paginationButton {
+	font-size: 35px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255);
+	cursor: pointer;
+}
+
+.formMessage {
+	display: flex;
+	flex-direction: column;
+
+	border: 2px solid black;
+}
+.topInput {
+	display: flex;
+	flex-direction: row;
+}
+.topInput * {
+	font-family: "Bodoni Moda", serif;
+	width: 50%;
+	padding: 10px;
+	font-size: 20px;
+}
+.SubmitButton {
+	font-size: 20px;
+	font-family: "Noto Sans JP", sans-serif;
+	background-color: rgb(255, 255, 255);
+	border:0px;
+	cursor: pointer;
+}
+.messageContent {
+	font-size: 20px;
+}
+
+header {
+	background-color: black;
+	opacity: 0.7;
+}
+
+.ApiRef {
+	color: #fff;
+	text-decoration: none;
+	padding-left: 25%;
+}
