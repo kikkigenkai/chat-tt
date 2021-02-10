@@ -1,8 +1,9 @@
 const { Router } = require('express');
 const router = Router();
 const Message = require('../models/messages');
+const validatorMiddleware = require('../middleware/validatorMiddleware');
 
-router.post('/', async (req, res) => {
+router.post('/', validatorMiddleware, async (req, res) => {
     try {
         const message = new Message({
             authorName: req.body.nickname,

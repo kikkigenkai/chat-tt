@@ -1,8 +1,9 @@
 const { Router } = require('express');
 const router = Router();
 const Message = require('../models/messages');
+const validatorMiddleware = require('../middleware/validatorMiddleware');
 
-router.put('/', async (req, res) => {
+router.put('/', validatorMiddleware, async (req, res) => {
     try {
         const id = req.body.id.replace(/\n/, '');
         const message = await Message.findByIdAndUpdate(id, {
