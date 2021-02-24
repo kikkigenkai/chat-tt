@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
 const busboyBodyParser = require('busboy-body-parser');
-const { DB_URI } = require('./connection');
+const { parsed: { DB_URI } } = require('dotenv').config();
 
 const homeRoute = require('./routes/home');
 const editRoute = require('./routes/edit');
@@ -34,6 +34,7 @@ app.use('/api/messages', apiEditMsgRoute);
 
 (async () => {
     try {
+        console.log(DB_URI);
         await mongoose.connect(DB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
