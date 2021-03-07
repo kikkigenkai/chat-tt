@@ -9,10 +9,7 @@ const homeRoute = require('./routes/home');
 const editRoute = require('./routes/edit');
 const docsRoute = require('./routes/docs');
 
-const apiGetListRoute = require('./api/getList');
-const apiGetOneRoute = require('./api/getOne');
-const apiCreateMsgRoute = require('./api/createMessage');
-const apiEditMsgRoute = require('./api/editMessage');
+const messagesApiRoute = require('./api/MessageModule');
 
 const PORT = process.env.PORT || 3000;
 
@@ -27,10 +24,7 @@ app.use('/', homeRoute);
 app.use('/edit', editRoute);
 app.use('/docs', docsRoute);
 
-app.use('/api/messages/list', apiGetListRoute);
-app.use('/api/messages/single', apiGetOneRoute);
-app.use('/api/messages', apiCreateMsgRoute);
-app.use('/api/messages', apiEditMsgRoute);
+app.use('/api/messages', messagesApiRoute);
 
 (async () => {
     try {
